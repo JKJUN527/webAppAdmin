@@ -1,0 +1,30 @@
+.content-type {
+	display: none;
+}
+.c-item{
+	padding: 1rem;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.c-comment{
+	/*line-height:0;*/
+	border-bottom: 1px solid #ddd;
+}
+.c-comment-num , .c-comment-suc{
+	color: red;
+}
+.o-con-much{
+	color: #00cccc;
+}
+.c-title{
+	color: #000;
+}
+.total-money{
+	position: absolute;
+    margin-top: 1rem;
+    font-weight: 200;
+}
+.confirmInfo-button{
+	border: 1px solid #00cccc !important;
+    color: #00cccc !important;
+}

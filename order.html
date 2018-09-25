@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>旅品物流管理系统</title>
+		<meta name="description" content="旅品物流管理系统" />
+		<meta name="keywords" content="旅品物流管理系统"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/order.css" />
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<header data-am-widget="header" class="am-header am-header-default header am-no-layout">
+		  <div class="am-header-left am-header-nav">
+		     <a class="left-link"> 
+		       <i class="am-header-icon am-icon-angle-left"></i>
+		     </a>
+		  </div>
+		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">订单管理</a></h1>
+		  <div class="am-header-right am-header-nav">
+		     <a href="#right-link" class=""> </a>
+		  </div>
+	  	</header>
+	  	<div class="content">
+			<ul class="order-style">
+		    	<li class="current" data-content='all'><a>全部</a></li>
+		    	<li data-content='notdis'><a>待配送</a></li>
+		    	<li data-content='cancel'><a>取消配送</a></li>
+		    	<li data-content='done'><a>已完成</a></li>
+	    	</ul>
+		</div>
+		<div class="content-type all" style="display: block;">
+			<div class="c-item">
+				<div class="c-comment">
+					<span class="c-comment-num">买家：小李 150916517682</span>
+					<span class="c-comment-suc">待配送</span>
+					<br>
+					<span class="c-comment-time">下单时间：2018.01.01 14:00:20</span>
+				</div>
+				<div class="c-comment-list" style="border: 0;">
+					<a class="o-con" href="">
+		            	<div class="o-con-img"><img src="images/detail.png"></div>
+		                <div class="o-con-txt">
+		                	<p class="c-title">银色星芒刺绣网纱底裤</p>
+		                	<p class="type">肤色/M</p>
+		                	<p class="price">￥88</p>
+		                	<p>合计：<span>￥176.00</span></p>
+		                </div>
+		            	<div class="o-con-much"> <h4>x2</h4></div>
+		            	
+		            </a>
+				</div>
+				<div class="c-com-btn">
+					<div class="c-com-money">
+						<span class="total-money">花5个商品 实付金额：￥ 175.00</span>
+						<a href="entryInfo.html" class="entryInfo-button">录入信息</a>
+						<a class="confirmInfo-button">确认送达</a>
+					</div>
+				</div> 	
+			</div>
+		</div>
+		<div class="content-type notdis">
+			待配送
+		</div>
+		<div class="content-type cancel">
+			取消配送
+		</div>
+		<div class="content-type done">
+			已完成
+		</div>
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default footer "  id="">
+		      <ul class="am-navbar-nav am-cf am-avg-sm-4">
+		          <li >
+		            <a href="index.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-area-chart" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">订单统计</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="order.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">订单管理</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="we.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-window-restore" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">售后处理</span>
+		            </a>
+		          </li>
+		          <li >
+		            <a href="member.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-user" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">账户管理</span>
+		            </a>
+		          </li>
+		   
+		      </ul>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/amazeui.min.js" ></script>
+<script type="text/javascript" src="js/main.js" ></script>
+<script type="text/javascript">
+	//点击顶部导航切换显示内容
+	$('.order-style li').click(function(){
+		var type = $(this).attr('data-content');
+		$('.order-style li').removeClass('current');
+		$(this).addClass('current');
+		$('.content-type').hide();
+		$('.'+ type).fadeIn();
+	});
+</script>
