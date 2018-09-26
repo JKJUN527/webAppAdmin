@@ -10,7 +10,38 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/order.css" />
 		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="sweetalert/sweetalert.css" />
+		<style type="text/css">
+			.order-info{
+    			background-color: white;
+    			margin-bottom: 1rem;
+			}
+			.order-info p{
+				font-size: 1rem;
+			    padding: 0.5rem 0 0 2rem;
+			}
+			.base-info{
+				height: 7rem;
+				background-color: #1abc9c;
+			}
+			.base-info p{
+				color: white;
+			    font-size: 1.5rem;
+			    padding: 1rem 0 0 2rem;
+			}
+			.order-address .address-position{
+				font-weight: 200;
+				padding-bottom: 1rem;
+			}
+			.order-remark p{
+				padding: 1rem 0 1rem 2rem;
+			}
+			.order-goods p{
+				padding: 0;
+			}
+			.order-money{
+				padding-bottom: 49px;
+			}
+		</style>
 	</head>
 	<body>
 		<header data-am-widget="header" class="am-header am-header-default header am-no-layout">
@@ -19,28 +50,30 @@
 		       <i class="am-header-icon am-icon-angle-left"></i>
 		     </a>
 		  </div>
-		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">订单管理</a></h1>
+		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">订单详情</a></h1>
 		  <div class="am-header-right am-header-nav">
 		     <a href="#right-link" class=""> </a>
 		  </div>
 	  	</header>
-	  	<div class="content">
-			<ul class="order-style">
-		    	<li class="current" data-content='all'><a>全部</a></li>
-		    	<li data-content='notdis'><a>待配送</a></li>
-		    	<li data-content='cancel'><a>取消配送</a></li>
-		    	<li data-content='done'><a>已完成</a></li>
-	    	</ul>
-		</div>
-		<div class="content-type all" style="display: block;">
-			<div class="c-item">
-				<div class="c-comment" onclick="showdetail(123);">
-					<span class="c-comment-num">买家：小李 150916517682</span>
-					<span class="c-comment-suc">待配送</span>
-					<br>
-					<span class="c-comment-time">下单时间：2018.01.01 14:00:20</span>
-				</div>
-				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
+	  	<div class="order-info base-info">
+	  		<p class="order-num">订单编号:<span>181565465451245</span></p>
+	  		<p class="order-time">订单时间:<span>2018.09.02 19:52:01</span></p>
+	  	</div>
+	  	<div class="order-info order-address">
+	  		<p class="address-name">收货人:<span>jkjun</span></p>
+	  		<p class="address-tel">收货电话:<span>15370103305</span></p>
+	  		<p class="address-position">广东省深圳市南山区科兴科学园</p>
+	  	</div>
+	  	<div class="order-info order-remark">
+	  		<p class="">配送备注:<span>无</span></p>
+	  	</div>
+	  	<div class="order-info order-delivery">
+	  		<p class="">配送人:<span>无</span></p>
+	  		<p class="">联系电话/物流单号:<span>无</span></p>
+	  		<p class="">配送录入时间:<span>无</span></p>
+	  	</div>
+	  	<div class="order-info order-goods">
+	  		<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
 					<a class="o-con" href="">
 		            	<div class="o-con-img"><img src="images/detail.png"></div>
 		                <div class="o-con-txt">
@@ -50,27 +83,30 @@
 		                	<p>合计：<span>￥176.00</span></p>
 		                </div>
 		            	<div class="o-con-much"> <h4>x2</h4></div>
-		            	
 		            </a>
-				</div>
-				<div class="c-com-btn">
-					<div class="c-com-money">
-						<span class="total-money">花5个商品 实付金额：￥ 175.00</span>
-						<a href="entryInfo.html" class="entryInfo-button">录入信息</a>
-						<a class="confirmInfo-button">确认送达</a>
-					</div>
-				</div> 	
+		            <a class="o-con" href="">
+		            	<div class="o-con-img"><img src="images/detail.png"></div>
+		                <div class="o-con-txt">
+		                	<p class="c-title">银色星芒刺绣网纱底裤</p>
+		                	<p class="type">肤色/XL</p>
+		                	<p class="price">￥88</p>
+		                	<p>合计：<span>￥88.00</span></p>
+		                </div>
+		            	<div class="o-con-much"> <h4>x1</h4></div>
+		            </a>
 			</div>
-		</div>
-		<div class="content-type notdis">
-			待配送
-		</div>
-		<div class="content-type cancel">
-			取消配送
-		</div>
-		<div class="content-type done">
-			已完成
-		</div>
+	  	</div>
+	  	<div class="order-info order-money">
+	  		<p class="">实付款:<span style="color: red;font-size: 1.5rem;">￥198</span></p>
+	  		<hr>
+	  		<p class="">商品合计:<span>￥198</span></p>
+	  		<p class="">运费:<span>￥0.00</span></p>
+	  		<p class="">优惠券:<span>￥0.00</span></p>
+	  		<p class="">现金红包:<span>￥0.00</span></p>
+	  		<p class="">活动优惠:<span>-￥8.00</span></p>
+	  	</div>
+	  	
+
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default footer "  id="">
 		      <ul class="am-navbar-nav am-cf am-avg-sm-4">
 		          <li >
@@ -112,36 +148,7 @@
 </html>
 <script type="text/javascript" src="js/jquery.min.js" ></script>
 <script type="text/javascript" src="js/amazeui.min.js" ></script>
-<script type="text/javascript" src="sweetalert/sweetalert.min.js" ></script>
 <script type="text/javascript" src="js/main.js" ></script>
 <script type="text/javascript">
-	//点击顶部导航切换显示内容
-	$('.order-style li').click(function(){
-		var type = $(this).attr('data-content');
-		$('.order-style li').removeClass('current');
-		$(this).addClass('current');
-		$('.content-type').hide();
-		$('.'+ type).fadeIn();
-	});
-	//点击确认送达
-	$('.confirmInfo-button').click(function(){
-		swal({ 
-				title: "Ajax请求示例", 
-				text: "提交运行ajax请求", 
-				type: "info", 
-				showCancelButton: true, 
-				closeOnConfirm: false, 
-				showLoaderOnConfirm: true, 
-		    },
-			function(){ 
-				setTimeout(function(){ 
-					swal("Ajax请求完成！"); 
-				}, 1000);
-		});
-			
-	});
-	//查看订单详情
-	function showdetail(orderId){
-		window.location.href="orderdetail.html?orderId="+orderId;  
-	}
+	
 </script>

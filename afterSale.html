@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>旅品物流管理系统</title>
+		<meta name="description" content="旅品物流管理系统" />
+		<meta name="keywords" content="旅品物流管理系统"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/order.css" />
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="sweetalert/sweetalert.css" />
+		<style type="text/css">
+			.c-item{
+				padding-bottom: 0;
+			}
+			.c-comment{
+				height: 30px;
+			}
+			.c-comment-list p{
+				margin:0.5rem 0 0 1rem;
+			}
+			.c-com-money{
+				padding-top: 1rem;
+			}
+			.c-com-money a{
+				margin-top: -0.5rem;
+			}
+			.order-statue{
+				padding: 1rem 0 0 1rem;
+				color: red;
+			}
+			.confirm-button{
+				border: 1px solid #00cccc !important;
+    			color: #00cccc !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header data-am-widget="header" class="am-header am-header-default header am-no-layout">
+		  <div class="am-header-left am-header-nav">
+		     <a class="left-link"> 
+		       <i class="am-header-icon am-icon-angle-left"></i>
+		     </a>
+		  </div>
+		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">售后管理</a></h1>
+		  <div class="am-header-right am-header-nav">
+		     <a href="#right-link" class=""> </a>
+		  </div>
+	  	</header>
+	  	<div class="content">
+			<ul class="order-style">
+		    	<li class="current" data-content='all'><a>全部</a></li>
+		    	<li data-content='treated'><a>待处理</a></li>
+		    	<li data-content='complete'><a>已完成</a></li>
+		    	<li data-content='refused'><a>已拒绝</a></li>
+	    	</ul>
+		</div>
+		<div class="content-type all" style="display: block;">
+			<div class="c-item">
+				<div class="c-comment" onclick="showdetail(123);">
+					<span class="c-comment-num">订单退款：2018.08.18 19:00:01</span>
+				</div>
+				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
+					<p>买家：<span>拉格朗日/15166648884</span></p>
+					<p>配送地址：<span>北京市东城区中南海</span></p>
+					<p>订单信息：<span>订单号/订单时间</span></p>
+					<p>退款金额：<span>￥102.00</span></p>
+				</div>
+				<div class="c-com-btn">
+					<div class="c-com-money">
+						<span class="order-statue">处理中</span>
+						<a class="confirm-button">确认退款</a>
+						<a class="refuse-button">拒绝申请</a>
+					</div>
+				</div> 	
+			</div>
+		</div>
+		<div class="content-type treated">
+			<div class="c-item">
+				<div class="c-comment" onclick="showdetail(123);">
+					<span class="c-comment-num">订单退款：2018.08.18 19:00:01</span>
+				</div>
+				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
+					<p>买家：<span>拉格朗日/15166648884</span></p>
+					<p>配送地址：<span>北京市东城区中南海</span></p>
+					<p>订单信息：<span>订单号/订单时间</span></p>
+					<p>退款金额：<span>￥102.00</span></p>
+				</div>
+				<div class="c-com-btn">
+					<div class="c-com-money">
+						<span class="order-statue">处理中</span>
+						<a class="confirm-button">确认退款</a>
+						<a class="refuse-button">拒绝申请</a>
+					</div>
+				</div> 	
+			</div>
+		</div>
+		<div class="content-type complete">
+			<div class="c-item">
+				<div class="c-comment" onclick="showdetail(123);">
+					<span class="c-comment-num">订单退款：2018.08.18 19:00:01</span>
+				</div>
+				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
+					<p>买家：<span>拉格朗日/15166648884</span></p>
+					<p>配送地址：<span>北京市东城区中南海</span></p>
+					<p>订单信息：<span>订单号/订单时间</span></p>
+					<p>退款金额：<span>￥102.00</span></p>
+				</div>
+				<div class="c-com-btn">
+					<div class="c-com-money">
+						<span class="order-statue" style="color: #00cccc">已完成</span>
+					</div>
+				</div> 	
+			</div>
+		</div>
+		<div class="content-type refused">
+			<div class="c-item">
+				<div class="c-comment" onclick="showdetail(123);">
+					<span class="c-comment-num">订单退款：2018.08.18 19:00:01</span>
+				</div>
+				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
+					<p>买家：<span>拉格朗日/15166648884</span></p>
+					<p>配送地址：<span>北京市东城区中南海</span></p>
+					<p>订单信息：<span>订单号/订单时间</span></p>
+					<p>退款金额：<span>￥102.00</span></p>
+				</div>
+				<div class="c-com-btn">
+					<div class="c-com-money">
+						<span class="order-statue">已拒绝</span>
+					</div>
+				</div> 	
+			</div>
+		</div>
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default footer "  id="">
+		      <ul class="am-navbar-nav am-cf am-avg-sm-4">
+		          <li >
+		            <a href="index.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-area-chart" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">订单统计</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="order.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">订单管理</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="afterSale.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-window-restore" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">售后管理</span>
+		            </a>
+		          </li>
+		          <li >
+		            <a href="member.html" class="">
+		                <span class="bottom-icon">
+		                	<i class="fa fa-user" aria-hidden="true"></i>
+		                </span>
+		                <span class="am-navbar-label">账户管理</span>
+		            </a>
+		          </li>
+		   
+		      </ul>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/amazeui.min.js" ></script>
+<script type="text/javascript" src="sweetalert/sweetalert.min.js" ></script>
+<script type="text/javascript" src="js/main.js" ></script>
+<script type="text/javascript">
+	//点击顶部导航切换显示内容
+	$('.order-style li').click(function(){
+		var type = $(this).attr('data-content');
+		$('.order-style li').removeClass('current');
+		$(this).addClass('current');
+		$('.content-type').hide();
+		$('.'+ type).fadeIn();
+	});
+	//点击确认退款
+	$('.confirm-button').click(function(){
+			swal({ 
+				  title: "确定退款吗？", 
+				  text: "你将无法恢复操作！", 
+				  type: "warning",
+				  showCancelButton: true, 
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定退款！", 
+				  closeOnConfirm: false
+				},
+				function(){
+				  swal("删除！", "你的虚拟文件已经被删除。", "success"); 
+				});
+	});
+	//点击拒绝申请
+	$('.refuse-button').click(function(){
+			swal({ 
+				  title: "确定拒绝申请吗？", 
+				  text: "你将无法恢复操作！", 
+				  type: "warning",
+				  showCancelButton: true, 
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定拒绝！", 
+				  closeOnConfirm: false
+				},
+				function(){
+				  swal("删除！", "你的虚拟文件已经被删除。", "success"); 
+				});
+			
+	});
+	//查看订单详情
+	function showdetail(orderId){
+		window.location.href="orderdetail.html?orderId="+orderId;  
+	}
+</script>
