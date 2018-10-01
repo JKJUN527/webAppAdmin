@@ -8,7 +8,6 @@
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="css/amazeui.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/order.css" />
 		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="sweetalert/sweetalert.css" />
 	</head>
@@ -19,58 +18,12 @@
 		       <i class="am-header-icon am-icon-angle-left"></i>
 		     </a>
 		  </div>
-		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">订单管理</a></h1>
+		  <h1 class="am-header-title"> <a href="#title-link" class="" style="color: #333;">快递管理</a></h1>
 		  <div class="am-header-right am-header-nav">
 		     <a href="#right-link" class=""> </a>
 		  </div>
 	  	</header>
-	  	<div class="content">
-			<ul class="order-style">
-		    	<li class="current" data-content='all'><a>全部</a></li>
-		    	<li data-content='notdis'><a>待配送</a></li>
-		    	<li data-content='cancel'><a>取消配送</a></li>
-		    	<li data-content='done'><a>已完成</a></li>
-	    	</ul>
-		</div>
-		<div class="content-type all" style="display: block;">
-			<div class="c-item">
-				<div class="c-comment" onclick="showdetail(123);">
-					<span class="c-comment-num">买家：小李 150916517682</span>
-					<span class="c-comment-suc">待配送</span>
-					<br>
-					<span class="c-comment-time">下单时间：2018.01.01 14:00:20</span>
-				</div>
-				<div class="c-comment-list" style="border: 0;" onclick="showdetail(123);">
-					<a class="o-con" href="">
-		            	<div class="o-con-img"><img src="images/detail.png"></div>
-		                <div class="o-con-txt">
-		                	<p class="c-title">银色星芒刺绣网纱底裤</p>
-		                	<p class="type">肤色/M</p>
-		                	<p class="price">￥88</p>
-		                	<p>合计：<span>￥176.00</span></p>
-		                </div>
-		            	<div class="o-con-much"> <h4>x2</h4></div>
-		            	
-		            </a>
-				</div>
-				<div class="c-com-btn">
-					<div class="c-com-money">
-						<span class="total-money">花5个商品 实付金额：￥ 175.00</span>
-						<a href="entryInfo.html" class="entryInfo-button">录入信息</a>
-						<a class="confirmInfo-button">确认送达</a>
-					</div>
-				</div> 	
-			</div>
-		</div>
-		<div class="content-type notdis">
-			待配送
-		</div>
-		<div class="content-type cancel">
-			取消配送
-		</div>
-		<div class="content-type done">
-			已完成
-		</div>
+	  	
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default footer "  id="">
 		      <ul class="am-navbar-nav am-cf am-avg-sm-4">
 		          <li >
@@ -115,33 +68,5 @@
 <script type="text/javascript" src="sweetalert/sweetalert.min.js" ></script>
 <script type="text/javascript" src="js/main.js" ></script>
 <script type="text/javascript">
-	//点击顶部导航切换显示内容
-	$('.order-style li').click(function(){
-		var type = $(this).attr('data-content');
-		$('.order-style li').removeClass('current');
-		$(this).addClass('current');
-		$('.content-type').hide();
-		$('.'+ type).fadeIn();
-	});
-	//点击确认送达
-	$('.confirmInfo-button').click(function(){
-		swal({ 
-				title: "Ajax请求示例", 
-				text: "提交运行ajax请求", 
-				type: "info", 
-				showCancelButton: true, 
-				closeOnConfirm: false, 
-				showLoaderOnConfirm: true, 
-		    },
-			function(){ 
-				setTimeout(function(){ 
-					swal("Ajax请求完成！"); 
-				}, 1000);
-		});
-			
-	});
-	//查看订单详情
-	function showdetail(orderId){
-		window.location.href="orderdetail.html?orderId="+orderId;  
-	}
+	
 </script>
